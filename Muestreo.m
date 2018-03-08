@@ -1,5 +1,5 @@
 %Programa para cambiar el muestreo de una imagen
-%
+%Modificar el valor de n que es la variable que modifica el muestreo.
 
 clear all;
 clc;
@@ -20,12 +20,11 @@ for i = 1:lony
   img2(i,j) = img(i*n,j*n);
  endfor
 endfor
-imwrite(img2, 'Imagen2a.jpg');
-img3 = imread('Imagen2a.jpg');
-[limy limx] = size(img3);
+[limy limx] = size(img2);
 lx = num2str(limx);
 ly = num2str(limy);
 text2 = [lx "x" ly "pixels"];
+imwrite(img2, [text2 '.jpg']);
 figure
-imshow(img3);
+imshow(img2);
 title(text2);
