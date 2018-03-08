@@ -12,5 +12,10 @@ for i = 1:x
     img2(i,j) = (img(i,j)/N)*N;
   endfor
 endfor
+
 figure
 imshow(img2);
+
+
+
+>>>>>>> 9b741ac411a82c0d76a97f364c9bc180bf1e4fab
